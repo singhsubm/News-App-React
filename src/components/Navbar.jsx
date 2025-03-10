@@ -13,11 +13,11 @@ export default function Navbar() {
 
     return (
         <div className="w-screen h-1/8 bg-zinc-400 flex flex-col items-center border-b-4 backdrop-blur-3xl">
-            <div className="upper-nav-bar flex justify-between flex-col md:flex-row items-center p-10 w-full h-1/2 bg-white gap-6 md:gap-0">
-                <div className="logo">
+            <div className="upper-nav-bar flex justify-between min-md:px-10 flex-col md:flex-row items-center p-4 w-full h-1/2 bg-white md:gap-0">
+                <div className="logo min-md:w-1/2">
                     <h1 className="text-4xl font-extrabold">N<span className="text-orange-400">e</span>ws <span className="text-orange-400">Ji</span></h1>
                 </div>
-                <div className="flex justify-between w-full md:w-1/2 items-center md:gap-10 ">
+                <div className="flex justify-between flex-col gap-4 min-[600px]:flex-row min-[600px]:gap-0 w-full items-center md:gap-10 ">
                     <form className="searchbar">
                         <input
                             type="search"
@@ -38,7 +38,7 @@ export default function Navbar() {
                 </div>
             </div>
             <div className="lower-nav-bar bg-white flex flex-col-reverse md:flex-row gap-2 md:gap-0 justify-between w-full h-1/2 px-10 items-center">
-                <div className="category flex gap-x-10 font-semibold">
+                <div className="category flex gap-x-10 max-[600px]:gap-x-4 font-semibold">
                     {categories.map((category) => (
                         <button key={category} onClick={() => dispatch(setQuery(category.toLowerCase()))} className={`hover:text-orange-400 ${query === category.toLowerCase() ? 'text-orange-400' : ''}`}>
                             {category}

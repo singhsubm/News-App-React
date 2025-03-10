@@ -9,7 +9,8 @@ export default function English({loading, language, data}) {
         {
             loading?<Spinner />:(
                 language === 'en' && (
-                    <div className='grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 p-4 md:mr-4'>
+                  <div class="grid grid-cols-2 max-[600px]:grid-cols-1 min-[700px]:grid-cols-3 min-[1200px]:grid-cols-4 gap-4 min-[800px]:gap-8 p-4">
+
                         {
                             data.map((news) => (
                                 

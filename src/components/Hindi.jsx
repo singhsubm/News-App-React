@@ -9,7 +9,7 @@ export default function Hindi({loading, language, data}) {
             {
                 loading?<Spinner />:(
                     language === 'hi' && (
-                        <div className='grid grid-cols-4 gap-8 p-4 mr-4'>
+                        <div className='grid grid-cols-2 max-[600px]:grid-cols-1 min-[700px]:grid-cols-3 min-[1200px]:grid-cols-4 gap-4 min-[800px]:gap-8 p-4'>
                             {
                                 data.map((news) => (
                                     
